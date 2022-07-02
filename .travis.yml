@@ -1,0 +1,12 @@
+language: python
+os:
+  - linux
+python:
+  - 3.6
+install:
+  - pip install -r ./pip/requirements.txt
+script:
+  - python vulnx.py -l
+  - python vulnx.py -u isetso.rnu.tn -t 3 -d -w
+  - python vulnx.py -D blaze -n 5
+  - python vulnx.py -u isetso.rnu.tn --dns -d
